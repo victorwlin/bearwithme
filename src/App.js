@@ -21,7 +21,7 @@ function App() {
         November 29, 2020
       </Typography>
 
-      <Typography variant={section} gutterBottom>
+      <Typography variant={section}>
         Introduction
       </Typography>
 
