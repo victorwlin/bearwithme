@@ -1,4 +1,5 @@
-import { Typography, Grid } from '@material-ui/core';
+import React from 'react';
+import { Typography, Grid, Modal, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import table from './table.jpg';
 
@@ -8,11 +9,32 @@ const useStyles = makeStyles({
   },
   image: {
     maxWidth: "100%"
+  },
+  modalImage: {
+    maxHeight: '100%'
+  },
+  modal: {
+    height: '95vh',
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    outline: 0
   }
 });
 
 function App() {
   const classes = useStyles();
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
   
   const title = "h3";
   const subtitle = "h5";
@@ -117,9 +139,14 @@ function App() {
         <Typography variant={section} className={classes.section}>
           Data
         </Typography>
-        <Grid item>
+        <Button onClick={handleOpen} size="small">
           <img src={table} alt="Table" className={classes.image} />
-        </Grid>
+        </Button>
+        <Modal open={open} onClose={handleClose}>
+          <Grid className={classes.modal}>
+            <img src={table} alt="Table" className={classes.modalImage} />
+          </Grid>
+        </Modal>
 
         <Typography variant={section} className={classes.section}>
           Results
