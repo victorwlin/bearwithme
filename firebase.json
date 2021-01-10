@@ -5,6 +5,7 @@
     ]
   },
   "hosting": {
+    "target": "bearwithme",
     "public": "build",
     "ignore": [
       "firebase.json",
