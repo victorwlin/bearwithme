@@ -16,7 +16,7 @@ const mailTransport = nodemailer.createTransport({
 exports.submit = functions.https.onRequest((req, res) => {
     cors(req, res, () => {
         if (req.method !== 'POST') {
-            res.status(200).send({isEmailSend: false});
+            res.status(404).send({isEmailSend: false});
             return
         }
 
