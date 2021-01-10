@@ -1,7 +1,9 @@
 import React from 'react';
 import { Typography, Grid, Modal, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+
 import table from './table.jpg';
+import Contact from "./Contact";
 
 const useStyles = makeStyles({
   section: {
@@ -173,6 +175,11 @@ function App() {
         <Typography variant={body}>
           The technique of valuing a company based on net current assets has been around forever. Benjamin Graham originally developed and tested this method between 1930 and 1932. He then went on to use this method extensively while running his investment management business, the Graham-Newman Corporation, through 1956. He reported that over a 30-year period, his average return using this method was about 20% per year.
         </Typography>
+
+        <Typography variant={section} className={classes.section}>
+          Contact Me
+        </Typography>
+        <Contact />
 
       </Grid>
 

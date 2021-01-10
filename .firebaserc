@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "backtests-1f81f"
+  },
+  "targets": {
+    "backtests-1f81f": {
+      "hosting": {
+        "bearwithme": [
+          "bearwithme"
+        ]
+      }
+    }
+  }
+}
