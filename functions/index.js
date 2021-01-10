@@ -16,6 +16,7 @@ const mailTransport = nodemailer.createTransport({
 exports.submit = functions.https.onRequest((req, res) => {
     cors(req, res, () => {
         if (req.method !== 'POST') {
+            res.status(200).send({isEmailSend: false});
             return
         }
 
@@ -23,9 +24,9 @@ exports.submit = functions.https.onRequest((req, res) => {
             from: req.body.email,
             replyTo: req.body.email,
             to: gmailEmail,
-            subject: `BEAR WITH ME - ${req.body.email}`,
+            subject: req.body.subject,
             text: req.body.message,
-            html: `<p>${req.body.message}`
+            // html: `<p>${req.body.message}</p>`
         };
 
         mailTransport.sendMail(mailOptions);
