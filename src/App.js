@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Grid, Modal, Button, List, ListItem, ListItemText } from '@material-ui/core';
+import { Typography, Grid, Modal, Button, List, ListItem, ListItemText, Link } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 import table from './table.jpg';
@@ -188,6 +188,12 @@ function App() {
         <Typography variant={body} paragraph>
           I am sharing my QuantConnect backtest in hopes that it will be useful to you. If you do your own backtest and have interesting results, I would love to hear about it. Also if you find any errors, please bring it to my attention.
         </Typography>
+        <Typography variant={body} paragraph>
+          I ran these backtests in November 2020, and since then there have been solved data issues, changes in Morningstar data, and/or changes in the backtesting engine, so the results you see when running my code will be different. I plan to do an update highlighting these changes.
+        </Typography>
+        <Link href="https://www.quantconnect.com/forum/discussion/10473/my-algorithm-for-benjamin-graham-039-s-net-current-asset-value-strategy-also-known-as-net-net-strategy/p1">
+          Backtest on QuantConnect
+        </Link>
 
         <Typography variant={section} className={classes.section}>
           Contact Me
