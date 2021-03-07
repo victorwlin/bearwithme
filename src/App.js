@@ -136,7 +136,7 @@ function App() {
         <Button onClick={handleOpen} size="small">
           <img src={table} alt="Table" className={classes.image} />
         </Button>
-        <Modal open={open} onClose={handleClose}>
+        <Modal open={open} onClose={handleClose} onClick={handleClose}>
           <Grid className={classes.modal}>
             <img src={table} alt="Table" className={classes.modalImage} />
           </Grid>
