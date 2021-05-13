@@ -1,6 +1,6 @@
 import { Paper, Typography, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { Link } from "react-router-dom";
+import { Link } from "@reach/router";
 
 import bear from "../Articles/Netnet/netnet-bear.jpg";
 
@@ -53,7 +53,7 @@ export default function FeaturedPost() {
               backtest of the 22-year period from April 1, 1998 to March 31,
               2020.
             </Typography>
-            <Link to="/netnet">Continue reading...</Link>
+            <Link to="netnet">Continue reading...</Link>
           </div>
         </Grid>
       </Grid>

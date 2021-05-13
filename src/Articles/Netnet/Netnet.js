@@ -8,9 +8,11 @@ import {
   ListItem,
   ListItemText,
   Link,
+  Container,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
+import Header from "../../Components/Header";
 import table from "./netnet-table.jpg";
 import Contact from "../../Components/Contact";
 
@@ -54,7 +56,8 @@ function Netnet() {
   const body = "body1";
 
   return (
-    <Grid container>
+    <Container maxWidth="lg">
+      <Header />
       <Grid item xs={12}>
         <Typography variant={title} className={classes.section}>
           Benjamin Graham's net current asset investment strategy
@@ -299,7 +302,7 @@ function Netnet() {
         </Typography>
         <Contact />
       </Grid>
-    </Grid>
+    </Container>
   );
 }
 

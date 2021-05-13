@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography, Toolbar, IconButton } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "@reach/router";
 
 import bear from "../Articles/bear.png";
 
@@ -23,20 +23,14 @@ function Header() {
 
   return (
     <Toolbar className={classes.toolbar}>
-      <Router>
-        <Link to="/">
-          <IconButton>
-            <img src={bear} alt="bear" className={classes.bear} />
-          </IconButton>
-        </Link>
-        <Typography
-          align="center"
-          className={classes.toolbarTitle}
-          variant="h5"
-        >
-          Bear with Me
-        </Typography>
-      </Router>
+      <Link to="/">
+        <IconButton>
+          <img src={bear} alt="bear" className={classes.bear} />
+        </IconButton>
+      </Link>
+      <Typography align="center" className={classes.toolbarTitle} variant="h5">
+        Bear with Me
+      </Typography>
     </Toolbar>
   );
 }
