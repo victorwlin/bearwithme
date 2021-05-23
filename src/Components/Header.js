@@ -8,6 +8,7 @@ import bear from "../Articles/bear.png";
 const useStyles = makeStyles((theme) => ({
   toolbar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
+    padding: 0,
   },
   // this is required to be able to center the title
   toolbarTitle: {
