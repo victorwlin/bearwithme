@@ -7,6 +7,7 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Hidden from "@material-ui/core/Hidden";
+import Button from "@material-ui/core/Button";
 
 import { Link } from "@reach/router";
 
@@ -21,6 +22,9 @@ const useStyles = makeStyles({
   },
   cardMedia: {
     width: 160,
+  },
+  link: {
+    textDecoration: "none",
   },
 });
 
@@ -48,7 +52,11 @@ export default function Post() {
                 1, 1998 to March 31, 2020. To run the backtest, I’m using
                 QuantConnect.
               </Typography>
-              <Link to="netnet">Continue reading...</Link>
+              <Button variant="contained">
+                <Link to="netnet" className={classes.link}>
+                  Continue reading
+                </Link>
+              </Button>
             </CardContent>
           </div>
           <Hidden xsDown>
