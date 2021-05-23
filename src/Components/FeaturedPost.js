@@ -2,7 +2,7 @@ import { Paper, Typography, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "@reach/router";
 
-import bear from "../Articles/Netnet/netnet-bear.jpg";
+import bear from "../Articles/UW1Sig/uw1sig-panda.jpg";
 
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
@@ -43,22 +43,24 @@ export default function FeaturedPost() {
         <Grid item md={6}>
           <div className={classes.mainFeaturedPostContent}>
             <Typography variant="h3" color="inherit" gutterBottom>
-              Benjamin Graham's net current asset investment strategy
+              Unusual Whales: Developing a Trading Strategy, Part 1
+            </Typography>
+            <Typography variant="subtitle1" color="textSecondary">
+              May 23, 2021
             </Typography>
             <Typography variant="h5" color="inherit" paragraph>
-              Like trillions of people who came before me, I’m trying to answer
-              a question that will plague mankind for as long as equity markets
-              still exist: Does Benjamin Graham’s Net Current Asset strategy (or
-              Net Net strategy) still work? To answer this question, I’m doing a
-              backtest of the 22-year period from April 1, 1998 to March 31,
-              2020.
+              Unusual Whales is a trading tool that alerts you when large trades
+              are being made in the market. The idea being that there are hedge
+              funds and other big players out there who might have more
+              information than everyone else, and it might pay to follow these
+              whales into their positions. The tool does a bunch of different
+              types of alerts, but for this series, I’m going to be focusing
+              exclusively on options.
             </Typography>
-            <Link to="netnet">Continue reading...</Link>
+            <Link to="uw1sig">Continue reading...</Link>
           </div>
         </Grid>
       </Grid>
     </Paper>
   );
 }
-
-// <Link href="/">Continue reading...</Link>
