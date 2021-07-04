@@ -1,8 +1,7 @@
 import { Paper, Typography, Grid, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { Link } from "@reach/router";
 
-import bear from "../Articles/UW1Sig/uw1sig-panda.jpg";
+import bear from "../Articles/UW2WinRates/uw2winrate-panda.jpg";
 
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
@@ -45,27 +44,24 @@ export default function FeaturedPost() {
           <Grid item md={6}>
             <div className={classes.mainFeaturedPostContent}>
               <Typography variant="h3" color="inherit" gutterBottom>
-                Unusual Whales: Developing a Trading Strategy, Part 1
+                Unusual Whales: Developing a Trading Strategy, Part 2
               </Typography>
 
               <Typography variant="subtitle1" color="textSecondary">
-                May 23, 2021
+                June 21, 2021
               </Typography>
 
               <Typography variant="h5" color="inherit" paragraph>
-                Unusual Whales is a trading tool that alerts you when large
-                trades are being made in the market. The idea being that there
-                are hedge funds and other big players out there who might have
-                more information than everyone else, and it might pay to follow
-                these whales into their positions. The tool does a bunch of
-                different types of alerts, but for this series, I’m going to be
-                focusing exclusively on options.
+                Today I want to see how we can use variables to find winning
+                trades and increase our win rate beyond the Unusual Whales
+                benchmark. I want to see if any of the variables have certain
+                ranges where the win rate is greater than the benchmark. For
+                each of the 12 variables, I’m going to sort the alerts by that
+                variable, and then I’m going to group the alerts into deciles.
               </Typography>
 
-              <Button variant="contained">
-                <Link to="uw1sig" className={classes.link}>
-                  Continue reading
-                </Link>
+              <Button variant="contained" component="a" href="uw2winrates">
+                Continue reading
               </Button>
             </div>
           </Grid>

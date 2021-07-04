@@ -5,13 +5,13 @@ import {
   List,
   ListItem,
   ListItemText,
-  Link,
   Container,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 import Header from "../../Components/Header";
 import Contact from "../../Components/Contact";
+import BMC from "../../Components/BMC";
 
 import pvalCall from "../UW1Sig/pval-call.jpg";
 import pvalPut from "../UW1Sig/pval-put.jpg";
@@ -83,7 +83,7 @@ function UW1sig() {
         <Typography variant={body} paragraph>
           In order to do the type of analysis that I want, I’m going to have to
           make some adjustments to the raw file. For this series of posts I’m
-          going to be looking at the period from December 2020 to April 2021.
+          going to be looking at the period from December 2020 to March 2021.
           The reason I’m starting in December 2020 is because greek values were
           only recorded by Unusual Whales starting in that month.
         </Typography>
@@ -309,6 +309,8 @@ function UW1sig() {
           I want to take a deeper dive into each variable by calculating win
           probabilities and really beginning to develop a trading strategy.
         </Typography>
+
+        <BMC />
 
         <Typography variant={section} className={classes.section}>
           Contact Me

@@ -15,6 +15,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Header from "../../Components/Header";
 import table from "./netnet-table.jpg";
 import Contact from "../../Components/Contact";
+import BMC from "../../Components/BMC";
 
 const useStyles = makeStyles({
   section: {
@@ -60,7 +61,7 @@ function Netnet() {
       <Header />
       <Grid item xs={12}>
         <Typography variant={title} className={classes.section}>
-          Benjamin Graham's net current asset investment strategy
+          Benjamin Graham's Net Current Asset Investment Strategy
         </Typography>
         <Typography variant={subtitle} color="textSecondary">
           Also commonly known as the net net strategy
@@ -296,6 +297,8 @@ function Netnet() {
         <Link href="https://www.quantconnect.com/forum/discussion/10473/my-algorithm-for-benjamin-graham-039-s-net-current-asset-value-strategy-also-known-as-net-net-strategy/p1">
           Backtest on QuantConnect
         </Link>
+
+        <BMC />
 
         <Typography variant={section} className={classes.section}>
           Contact Me
